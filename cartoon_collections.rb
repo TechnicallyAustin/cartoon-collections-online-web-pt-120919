@@ -1,9 +1,10 @@
 def roll_call_dwarves(dwarves)
-  i = 0
-  list = 1 
-  new_arr=[]
-  dwarves.collect { |x| new_arr <<"#{list}. #{x}"}
-  new_arr
+  list = 0
+  dwarves.collect do |name|
+    list += 1
+    puts "#{list}. #{name}"
+  
+end
 end
     
 
@@ -15,13 +16,25 @@ def summon_captain_planet(array)
 end
 
 def long_planeteer_calls(array)
-  array.collect |long|
-  if long.length > 4 do
+  all_long = array.all? {|x| x.length > 4}
+  if all_long == true
+    true
+  elsif all_long == false 
+    false
+  end
+    
+  
     
   # Your code here
 end
 
-def find_the_cheese# code an argument here
+def find_the_cheese(array)
   # the array below is here to help
   cheese_types = ["cheddar", "gouda", "camembert"]
+  has_cheese = array.detect { |i| cheese_types.include?(i) }
+  if has_cheese == true
+    
+  elsif has_cheese == false 
+  nil
+end
 end
