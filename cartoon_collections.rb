@@ -34,7 +34,7 @@ def find_the_cheese(array)
   has_cheese = array.detect {|i| cheese_types.include?(i) }
   
   if has_cheese == true
-    
+    has_cheese
   elsif has_cheese == false 
   nil
 end
