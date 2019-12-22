@@ -18,7 +18,7 @@ end
 def long_planeteer_calls(array)
   all_long = array.all? {|x| x.length > 4}
   if all_long == true
-    true
+    t
   elsif all_long == false 
     false
   end
